@@ -1,38 +1,45 @@
-# create-svelte
+# svelte-fued
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Svelte-fued is fun daily game where you have to guess most picked answers by the community.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+1. You'll enter the app and be asked a question e.g 'What is the best planet'
+2. You'll select an answer and be taken to a new question e.g 'What is the fluffiest animal'
+3. You'll have the three guesses to put the answers in order from most popular to least popular
+4. The order of answers will be decided by the community a few days before
+5. You can share how you did on the ordering with a wordle like emoji breakdown
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+You can run the project with pnpm run dev after you install dependencies
 
 ```bash
-npm run dev
+pnpm install
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm run dev
 ```
 
 ## Building
 
-To create a production version of your app:
+The app is not set up to build and deploy yet. It will need an adapter
 
-```bash
-npm run build
-```
+## Things to do
+- [ ] Host web app on Vercel
+- [ ] Read question’s from db
+- [ ] Submit a vote to db
+- [ ] Give users a cookie to vote
+- [ ] Populate db with questions
+- [ ] Use timezones to fetch questions
+- [ ] Use timezone to block voting
+- [ ] Animation for select and submit
+- [ ] Transitions from pick to order page
+- [ ] Animation of reordering
+- [ ] Animation of submit order failure
+- [ ] Animation of submit order success
+- [ ] Full share emoji list
+- [ ] Save stats to local storage
+- [ ] Display help
+- [ ] Display stats
+- [ ] Rate limit ip
+- [ ] Save answers in redis cache for quicker load time on edge
+- [ ] Domain
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
